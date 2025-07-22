@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS evidence_ts (
     evidence_uuid text NOT NULL,
     evidence_status JSONB NOT NULL,
     labels JSONB NOT NULL,
-    PRIMARY KEY (ts, evidence_id)
+    PRIMARY KEY (ts, evidence_uuid)
 );
 
 -- Convert it to a hypertable
