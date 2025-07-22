@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS timescaledb;
 -- Create the evidence_ts table
 CREATE TABLE IF NOT EXISTS evidence_ts (
     ts TIMESTAMPTZ NOT NULL default now(),
-    evidence_id uuid NOT NULL,
+    evidence_uuid text NOT NULL,
     evidence_status JSONB NOT NULL,
     labels JSONB NOT NULL,
     PRIMARY KEY (ts, evidence_id)
